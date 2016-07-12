@@ -1,0 +1,5 @@
+install.sh
+Vagrantfile
+.DS_Store
+.vagrant
+backend/nodeserver/node_modules
