@@ -17,14 +17,9 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 
 /**
- * Declaring API routes
+ * Pass our router to the route module to connect all of our endpoints.
  */
-var simpleRoute = require('./routes/simpleRoute.js');
-
-/**
- * Registering API routes as /api/<route>
- */
-app.use('/api', simpleRoute);
+require('./routes')(app, router);
 
 /**
  * Serving /public and and runs the server
