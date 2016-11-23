@@ -1,6 +1,7 @@
 var express = require('express');
-var bodyParser = require('body-parser');
 var router = express.Router();
+var bodyParser = require('body-parser');
+var settings = require('./config/settings');
 
 var app = express();
 app.use(bodyParser.json());
@@ -19,7 +20,7 @@ app.use(allowCrossDomain);
 /**
  * Pass our router to the route module to connect all of our endpoints.
  */
-require('./routes')(app, router);
+require('./services/routes')(app, router);
 
 /**
  * Serving /public and and runs the server

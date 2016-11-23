@@ -1,4 +1,4 @@
-# CS498RK Passport Demo
+# Simple App
 
 ## Installing and Running
  * npm install
